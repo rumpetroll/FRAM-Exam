@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRAM Landing Page</title>
+    <link href='https://fonts.googleapis.com/css?family=Frank Ruhl Libre' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
+</head>
+
+<body>
+    <header class="main-header">
+        <button class="menu-icon" aria-label="Open menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="logo">
+            <a href="landing_page.html" class="logo-text">FRAM</a>
+        </div>
+        <div class="cart-indicator" aria-label="Shopping cart">
+            <span class="cart-count">0</span>
+        </div>
+    </header>
+
+    <div class="menu-panel" id="menuPanel">
+        <button class="close-menu" onclick="toggleMenu()">×</button>
+        <a href="product-page.html"><h2>Products</h2></a>
+        <h2>Chat</h2>
+        <h2>Checkout</h2>
+    </div>
+
+    <section class="produce-section">
+        <h2 class="section-title">Produce</h2>
+        <p class="produce-text">
+            Explore our selection of seasonal produce, sourced directly from <br>
+            local farms to ensure peak freshness and quality. Every item is <br>
+            chosen with care, supporting sustainable practises and bringing <br>
+            the best of the harvest to your table.
+        </p>
+        <div class="product-cards">
+
+             <!-- Product Card 1 -->
+             <div class="product-card">
+                <div class="product-image-container">
+                    <img src="Images/Product Page/lukasz-rawa-HB_MVtHVMLc-unsplash.jpg" alt="Oats">
+                    <button class="add-to-basket">Add to basket</button>
+                </div>
+                <div class="product-info">
+                    <div class="product-name-weight">
+                        <p class="product-name">Oats</p>
+                        <p class="product-weight">1 kg</p>
+                    </div>
+                    <p class="product-price">16 kr / kg</p>
+                </div>
+            </div>
+
+             <!-- Product Card 2 -->
+             <div class="product-card">
+                <div class="product-image-container">
+                    <img src="Images/Product Page/goh-rhy-yan-CCxWLAx0qmk-unsplash.jpg" alt="Oats">
+                    <button class="add-to-basket">Add to basket</button>
+                </div>
+                <div class="product-info">
+                    <div class="product-name-weight">
+                        <p class="product-name">Red Onions</p>
+                        <p class="product-weight">1 kg</p>
+                    </div>
+                    <p class="product-price">45 kr / kg</p>
+                </div>
+            </div>
+
+             <!-- Product Card 3 -->
+             <div class="product-card">
+                <div class="product-image-container">
+                    <img src="Images/Product Page/matthew-pilachowski-w1eAFyBLhLM-unsplash.jpg" alt="Oats">
+                    <button class="add-to-basket">Add to basket</button>
+                </div>
+                <div class="product-info">
+                    <div class="product-name-weight">
+                        <p class="product-name">Garlic</p>
+                        <p class="product-weight">0.2 kg</p>
+                    </div>
+                    <p class="product-price">38 kr</p>
+                </div>
+            </div>
+
+             <!-- Product Card 4 -->
+             <div class="product-card">
+                <div class="product-image-container">
+                    <img src="Images/Product Page/rodrigo-dos-reis-h3AkzboxK4Q-unsplash.jpg" alt="Oats">
+                    <button class="add-to-basket">Add to basket</button>
+                </div>
+                <div class="product-info">
+                    <div class="product-name-weight">
+                        <p class="product-name">Potatos</p>
+                        <p class="product-weight">1 kg</p>
+                    </div>
+                    <p class="product-price">48 kr / kg</p>
+                </div>
+            </div>
+
+             <!-- Product Card 5 -->
+             <div class="product-card">
+                <div class="product-image-container">
+                    <img src="Images/Product Page/goh-rhy-yan-wUBhu3GXIg0-unsplash.jpg" alt="Oats">
+                    <button class="add-to-basket">Add to basket</button>
+                </div>
+                <div class="product-info">
+                    <div class="product-name-weight">
+                        <p class="product-name">Carrots</p>
+                        <p class="product-weight">Gård</p>
+                    </div>
+                    <p class="product-price">48 kr / kg</p>
+                </div>
+            </div>
+
+        </div>
+    </section> 
+
+    <section class="partnering-farms">
+        <h2 class="section-title">
+            SEE OUR PARTNERING <br>
+            FARMS
+        </h2>
+    </section>
+
+    <gmp-map center="60.3044319152832,10.635822296142578" zoom="14" map-id="DEMO_MAP_ID">
+        <gmp-advanced-marker position="60.3044319152832,10.635822296142578" title="My location"></gmp-advanced-marker>
+      </gmp-map>
+      
+    <footer class="footer">
+        <h1 class="footer-logo">FRAM</h1>
+        <hr class="footer-divider">
+        <h2 class="footer-heading">STAY UPDATED</h2>
+        <p class="footer-text">Sign up for our newsletter to be the first to know about new produce or other exciting news!</p>
+        <form class="newsletter-form">
+            <input type="text" placeholder="First name" class="footer-input">
+            <input type="email" placeholder="E-mail address" class="footer-input">
+            <button type="submit" class="footer-button">Send</button>
+        </form>
+    </footer>    
+    
+    <script src="index.js"></script>
+
+</body>
+</html>
