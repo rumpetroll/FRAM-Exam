@@ -32,7 +32,7 @@ cd [repository-directory]
 - Install Dependencies: No external dependencies are required. Ensure you have a text editor (e.g., VS Code) and a browser.
 
 
-API Key Setup: 
+API Key Setup
 
 Replace the API_KEY placeholder in the JavaScript file with your OpenAI API key.
 
