@@ -1,202 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FRAM Landing Page</title>
-    <link href='https://fonts.googleapis.com/css?family=Frank Ruhl Libre' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Frank Ruhl Libre"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arimo"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="main-header">
-        <button class="menu-icon" aria-label="Open menu" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="logo">
-            <a href="landing_page.html" class="logo-text">FRAM</a>
-        </div>
-        <div class="cart-indicator" aria-label="Shopping cart">
-            <span class="cart-count">0</span>
-        </div>
+      <button class="menu-icon" aria-label="Open menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="logo">
+        <a href="landing_page.html" class="logo-text">FRAM</a>
+      </div>
+      <div class="cart-indicator" aria-label="Shopping cart">
+        <span class="cart-count">0</span>
+      </div>
     </header>
 
     <div class="menu-panel" id="menuPanel">
-        <button class="close-menu" onclick="toggleMenu()">×</button>
-        <a href="product-page.html"><h2>Products</h2></a>
-        <h2>Chat</h2>
-        <h2>Checkout</h2>
+      <button class="close-menu" onclick="toggleMenu()">×</button>
+      <a href="product-page.html"><h2>Products</h2></a>
+      <h2>Chat</h2>
+      <h2>Checkout</h2>
     </div>
 
     <section class="hero">
-        <div class="hero-text">
-            <h1 class="logo-text">FRAM</h1>
-            <div class="line-container">
-                <div class="vertical-line"></div>
-            </div>
-            <p class="header-text">HOME DELIVERY FROM YOUR LOCAL FARMS</p>
+      <div class="hero-text">
+        <h1 class="logo-text">FRAM</h1>
+        <div class="line-container">
+          <div class="vertical-line"></div>
         </div>
+        <p class="header-text">HOME DELIVERY FROM YOUR LOCAL FARMS</p>
+      </div>
     </section>
-    
 
     <section class="feature-section">
-        <div class="card">
-            <h2 class="header-text">Shop Our Seasonal <br /> Selection</h2>
-            <h3 class="accent-text">Updated every week</h3>
-            <img src="Images/Landing Page/nina-luong-dp06f70Eyvc-unsplash.jpg" alt="Seasonal produce in a basket">
-            <p class="body-text">New produce is added continuously as time goes by and the seasons change.</p>
-            <a href="product-page.html">
-                <button class="sub-header">Browse our selection</button>
-            </a>
-        </div>
+      <div class="card">
+        <h2 class="header-text">
+          Shop Our Seasonal <br />
+          Selection
+        </h2>
+        <h3 class="accent-text">Updated every week</h3>
+        <img
+          src="Images/Landing Page/nina-luong-dp06f70Eyvc-unsplash.jpg"
+          alt="Seasonal produce in a basket"
+        />
+        <p class="body-text">
+          New produce is added continuously as time goes by and the seasons
+          change.
+        </p>
+        <a href="product-page.html">
+          <button class="sub-header">Browse our selection</button>
+        </a>
+      </div>
 
-        <div class="card">
-            <h2 class="header-text">Ask Us About <br /> Anything</h2>
-            <h3 class="accent-text">All your questions answered</h3>
-            <img src="Images/Landing Page/rebecca-ritchie-NWrp3FK68yE-unsplash.jpg" alt="Farmer in the field pointing out">
-            <p class="body-text">New produce is added continuously as time goes by and the seasons change.</p>
-            <button class="sub-header">Go to chat</button>
-        </div>
+      <div class="card">
+        <h2 class="header-text">
+          Ask Us About <br />
+          Anything
+        </h2>
+        <h3 class="accent-text">All your questions answered</h3>
+        <img
+          src="Images/Landing Page/rebecca-ritchie-NWrp3FK68yE-unsplash.jpg"
+          alt="Farmer in the field pointing out"
+        />
+        <p class="body-text">
+          New produce is added continuously as time goes by and the seasons
+          change.
+        </p>
+        <button class="sub-header">Go to chat</button>
+      </div>
     </section>
 
     <section class="how-it-works">
-        <!-- Left Column -->
-        <div class="how-it-works-left">
-            <h2 class="how-it-works-heading">THIS IS HOW IT WORKS</h2>
+      <!-- Left Column -->
+      <div class="how-it-works-left">
+        <h2 class="how-it-works-heading">THIS IS HOW IT WORKS</h2>
+      </div>
+
+      <!-- Right Column -->
+      <div class="how-it-works-right">
+        <!-- Step 1: Order Groceries -->
+        <div class="info-box">
+          <h3 class="info-title">ORDER GROCERIES</h3>
+          <p class="info-description">
+            Fram is a circular service that ensures your kitchen is always
+            stocked with the essentials you need. Browse our seasonal selection,
+            choose your items, and place your order online.
+            <a href="#">See our stock here</a>
+          </p>
         </div>
-    
-        <!-- Right Column -->
-        <div class="how-it-works-right">
-            <!-- Step 1: Order Groceries -->
-            <div class="info-box">
-                <h3 class="info-title">ORDER GROCERIES</h3>
-                <p class="info-description">
-                    Fram is a circular service that ensures your kitchen is always stocked with the essentials you need. 
-                    Browse our seasonal selection, choose your items, and place your order online. 
-                    <a href="#">See our stock here</a>
-                </p>
-            </div>
-            
-            <!-- Step 2: Stock Up -->
-            <div class="info-box">
-                <h3 class="info-title">STOCK UP</h3>
-                <p class="info-description">
-                    Once your order arrives, unpack the produce and store it however it works best for you. 
-                    Hold onto the containers—they’re yours to keep until your next order.
-                </p>
-            </div>
-            
-            <!-- Step 3: Scan & Reorder -->
-            <div class="info-box">
-                <h3 class="info-title">SCAN & REORDER</h3>
-                <p class="info-description">
-                    Ready for a refill? Grab the containers from your last order and scan the QR code with our app or your phone’s camera. 
-                    This instantly adds the items back to your cart, making reordering a breeze.
-                </p>
-            </div>
-            
-            <!-- Step 4: Swap & Reuse -->
-            <div class="info-box">
-                <h3 class="info-title">SWAP & REUSE</h3>
-                <p class="info-description">
-                    When we deliver your new order, simply leave your empty containers outside. We’ll pick them up, clean them thoroughly, 
-                    and reuse them for future deliveries.
-                </p>
-            </div>
+
+        <!-- Step 2: Stock Up -->
+        <div class="info-box">
+          <h3 class="info-title">STOCK UP</h3>
+          <p class="info-description">
+            Once your order arrives, unpack the produce and store it however it
+            works best for you. Hold onto the containers—they’re yours to keep
+            until your next order.
+          </p>
         </div>
+
+        <!-- Step 3: Scan & Reorder -->
+        <div class="info-box">
+          <h3 class="info-title">SCAN & REORDER</h3>
+          <p class="info-description">
+            Ready for a refill? Grab the containers from your last order and
+            scan the QR code with our app or your phone’s camera. This instantly
+            adds the items back to your cart, making reordering a breeze.
+          </p>
+        </div>
+
+        <!-- Step 4: Swap & Reuse -->
+        <div class="info-box">
+          <h3 class="info-title">SWAP & REUSE</h3>
+          <p class="info-description">
+            When we deliver your new order, simply leave your empty containers
+            outside. We’ll pick them up, clean them thoroughly, and reuse them
+            for future deliveries.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section class="popular-produce">
-        <h2 class="section-title">Popular Produce</h2>
-        <div class="product-cards">
-            <!-- Product Card 1 -->
-            <div class="product-card">
-                <div class="product-image-container">
-                    <img src="Images/Product Page/lukasz-rawa-HB_MVtHVMLc-unsplash.jpg" alt="Oats">
-                    <button class="add-to-basket">Add to basket</button>
-                </div>
-                <div class="product-info">
-                    <div class="product-name-weight">
-                        <p class="product-name">Oats</p>
-                        <p class="product-weight">1 kg</p>
-                    </div>
-                    <p class="product-price">48 kr / kg</p>
-                </div>
+      <h2 class="section-title">Popular Produce</h2>
+      <div class="product-cards">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="Images/Product Page/lukasz-rawa-HB_MVtHVMLc-unsplash.jpg"
+              alt="Oats"
+            />
+            <button class="add-to-basket">Add to basket</button>
+          </div>
+          <div class="product-info">
+            <div class="product-name-weight">
+              <p class="product-name">Oats</p>
+              <p class="product-weight">1 kg</p>
             </div>
-    
-            <!-- Product Card 2 -->
-            <div class="product-card">
-                <div class="product-image-container">
-                    <img src="Images/Product Page/goh-rhy-yan-CCxWLAx0qmk-unsplash.jpg" alt="Red Onions">
-                    <button class="add-to-basket">Add to basket</button>
-                </div>
-                <div class="product-info">
-                    <div class="product-name-weight">
-                        <p class="product-name">Red Onions</p>
-                        <p class="product-weight">0.5 kg</p>
-                    </div>
-                    <p class="product-price">48 kr / kg</p>
-                </div>
-            </div>
-    
-            <!-- Product Card 3 -->
-            <div class="product-card">
-                <div class="product-image-container">
-                    <img src="Images/Product Page/matthew-pilachowski-w1eAFyBLhLM-unsplash.jpg" alt="Garlic">
-                    <button class="add-to-basket">Add to basket</button>
-                </div>
-                <div class="product-info">
-                    <div class="product-name-weight">
-                        <p class="product-name">Garlic</p>
-                        <p class="product-weight">0.2 kg</p>
-                    </div>
-                    <p class="product-price">48 kr / kg</p>
-                </div>
-            </div>
+            <p class="product-price">48 kr / kg</p>
+          </div>
         </div>
-    </section>    
+
+        <!-- Product Card 2 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="Images/Product Page/goh-rhy-yan-CCxWLAx0qmk-unsplash.jpg"
+              alt="Red Onions"
+            />
+            <button class="add-to-basket">Add to basket</button>
+          </div>
+          <div class="product-info">
+            <div class="product-name-weight">
+              <p class="product-name">Red Onions</p>
+              <p class="product-weight">0.5 kg</p>
+            </div>
+            <p class="product-price">48 kr / kg</p>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img
+              src="Images/Product Page/matthew-pilachowski-w1eAFyBLhLM-unsplash.jpg"
+              alt="Garlic"
+            />
+            <button class="add-to-basket">Add to basket</button>
+          </div>
+          <div class="product-info">
+            <div class="product-name-weight">
+              <p class="product-name">Garlic</p>
+              <p class="product-weight">0.2 kg</p>
+            </div>
+            <p class="product-price">48 kr / kg</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Chat Icon -->
-<div class="chat-icon" id="chatIcon">
-    <img src="https://png.pngtree.com/png-clipart/20230417/original/pngtree-chatbot-line-icon-png-image_9063709.png" alt="Chat Icon">
-</div>
+    <div class="chat-icon" id="chatIcon">
+      <img
+        src="https://png.pngtree.com/png-clipart/20230417/original/pngtree-chatbot-line-icon-png-image_9063709.png"
+        alt="Chat Icon"
+      />
+    </div>
 
-<!-- Chat Section -->
-<div class="chat-container" id="chatContainer">
-    <section class="chat-section">
+    <!-- Chat Section -->
+    <div class="chat-container" id="chatContainer">
+      <section class="chat-section">
         <div class="chat-header">
-            <button class="close-chat" id="closeChat">×</button>
+          <button class="close-chat" id="closeChat">×</button>
         </div>
         <div class="chat-window" id="chatWindow">
-            <!-- Chat messages will dynamically appear here -->
+          <!-- Chat messages will dynamically appear here -->
         </div>
         <div class="chat-input">
-            <input type="text" id="userMessage" placeholder="Type your message here..." />
-            <button id="sendMessage">
-                <img src="arrow-141-48.png"/>
-            </button>
-            
+          <input
+            type="text"
+            id="userMessage"
+            placeholder="Type your message here..."
+          />
+          <button id="sendMessage">
+            <img src="arrow-141-48.png" />
+          </button>
         </div>
-    </section>
-</div>
+      </section>
+    </div>
 
-    
     <footer class="footer">
-        <h1 class="footer-logo">FRAM</h1>
-        <hr class="footer-divider">
-        <h2 class="footer-heading">STAY UPDATED</h2>
-        <p class="footer-text">Sign up for our newsletter to be the first to know about new produce or other exciting news!</p>
-        <form class="newsletter-form">
-            <input type="text" placeholder="First name" class="footer-input">
-            <input type="email" placeholder="E-mail address" class="footer-input">
-            <button type="submit" class="footer-button">Send</button>
-        </form>
-    </footer>    
+      <h1 class="footer-logo">FRAM</h1>
+      <hr class="footer-divider" />
+      <h2 class="footer-heading">STAY UPDATED</h2>
+      <p class="footer-text">
+        Sign up for our newsletter to be the first to know about new produce or
+        other exciting news!
+      </p>
+      <form class="newsletter-form">
+        <input type="text" placeholder="First name" class="footer-input" />
+        <input type="email" placeholder="E-mail address" class="footer-input" />
+        <button type="submit" class="footer-button">Send</button>
+      </form>
+    </footer>
 
     <script src="index.js"></script>
-    
-</body>
+  </body>
 </html>
