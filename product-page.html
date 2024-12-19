@@ -9,6 +9,13 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=console.debug&libraries=maps,marker&v=beta">
     </script>
+    <!-- Google maps code I did not use
+    <style>
+        #map {
+          height: 400px;
+          width: 400px;
+        }
+      </style> -->
 </head>
 
 <body>
@@ -122,15 +129,49 @@
     </section> 
 
     <section class="partnering-farms">
-        <h2 class="section-title">
-            SEE OUR PARTNERING <br>
-            FARMS
-        </h2>
-    </section>
+        <div class="partnering-farms-container">
+            <!-- Title Section -->
+            <div class="text-container">
+                <h2 class="section-title">
+                    SEE OUR <br> 
+                    PARTNERING FARMS
+                </h2>
+            </div>
+    
+            <!-- Divider -->
+            <div class="divider"></div>
+    
+            <!-- Map Section -->
+            <div class="map-container">
+                <img src="https://v.wpimg.pl/ZTZkNzI0dTU7CThJZkt4IHhRbBMgEnZ2L0l0WGYBaGxqE2EcIFw_Jj8bIVQuQi8kOxw-VDlcdTUqAmEMeB8-PSkbIhswHz85OA4qVSxSaGJjXyhPZAk4Mm9GekJ-U3c1Y1p2V34JOTFsD3lIfQY7Y3gW" alt="Google Map of Partnering Farms">
+            </div>
+        </div>
+    </section>    
+    
 
-    <gmp-map center="60.3044319152832,10.635822296142578" zoom="14" map-id="DEMO_MAP_ID">
-        <gmp-advanced-marker position="60.3044319152832,10.635822296142578" title="My location"></gmp-advanced-marker>
-      </gmp-map>
+          <!-- Chat Icon -->
+<div class="chat-icon" id="chatIcon">
+    <img src="https://png.pngtree.com/png-clipart/20230417/original/pngtree-chatbot-line-icon-png-image_9063709.png" alt="Chat Icon">
+</div>
+
+    <!-- Chat Section -->
+<div class="chat-container" id="chatContainer">
+    <section class="chat-section">
+        <div class="chat-header">
+            <button class="close-chat" id="closeChat">×</button>
+        </div>
+        <div class="chat-window" id="chatWindow">
+            <!-- Chat messages will dynamically appear here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userMessage" placeholder="Type your message here..." />
+            <button id="sendMessage">
+                <img src="arrow-141-48.png"/>
+            </button>
+            
+        </div>
+    </section>
+</div>
       
     <footer class="footer">
         <h1 class="footer-logo">FRAM</h1>
@@ -144,7 +185,13 @@
         </form>
     </footer>    
     
+    <!-- Google maps code I did not use
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyAfYidGSVXihsbPYcPTdGWXXNlEXExuke4", v: "weekly"});</script>
+    -->
+
     <script src="index.js"></script>
+
 
 </body>
 </html>
