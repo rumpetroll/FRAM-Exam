@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 function toggleMenu() {
   document.body.classList.toggle("menu-open");
 }
@@ -13,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const sendButton = document.getElementById("sendMessage");
 
   const API_ENDPOINT = "https://api.openai.com/v1/chat/completions";
+  const OPENAI_API_KEY = "PASTE YOUR API KEY HERE AND DO NOT COMMIT IT";
 
   // Function to toggle chat visibility
   function toggleChat() {
@@ -91,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
         },
         body: JSON.stringify(requestBody),
       });
