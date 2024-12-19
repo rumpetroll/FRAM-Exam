@@ -107,6 +107,10 @@ body {
     padding: 1rem;
     height: 60px;
     border-bottom: 1px solid #0B0A08;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .menu-icon {
@@ -148,8 +152,8 @@ body {
 .menu-panel {
     position: fixed;
     top: 0;
-    left: -100%; /* Hidden by default */
-    width: 514px;
+    left: -100%;
+    width: 414px;
     height: 100%;
     background-color: #008F51;
     color: #0B0A08;
@@ -159,7 +163,7 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     font-family: 'Arimo', sans-serif;
-    z-index: 1000; /* Ensure it appears above other content */
+    z-index: 1000; 
 }
 
 /* Styling specifically for linked h2 elements */
@@ -171,7 +175,7 @@ body {
 
 .menu-panel a:hover h2 {
     text-decoration: underline;
-    font-weight: bold; /* Optional: makes the text bold on hover */
+    font-weight: bold; 
 }
 
 .menu-panel h2 {
@@ -183,7 +187,7 @@ body {
 }
 
 .menu-panel h2:nth-of-type(3) {
-    margin-top: 600px; /* Push to bottom */
+    margin-top: 600px; 
     font-weight: lighter;
     font-size: 24px;
     text-align: center;
@@ -204,7 +208,7 @@ body {
 
 /* Toggle for menu open */
 .menu-open #menuPanel {
-    left: 0; /* Shows the panel */
+    left: 0; 
 }
 
 
@@ -225,7 +229,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem; /* Adds spacing between elements */
+    gap: 1rem; 
 }
 
 /* Logo Text Styling */
@@ -241,7 +245,7 @@ body {
     width: 2px;
     height: 200px;
     background-color: white;
-    margin: 1rem 0; /* Adds space above and below the line */
+    margin: 1rem 0; 
 }
 
 /* Subtext Styling */
@@ -326,15 +330,44 @@ body {
     background-color: #ae2e21;
 }
 
-/* Section Background and Layout */
+/* Media Query for Mobile */
+@media (max-width: 1000px) {
+    .feature-section {
+        flex-direction: column; 
+        padding: 45px 0;
+        gap: 30px; 
+    }
+
+    .feature-section::before {
+        /* Horizontal Divider */
+        width: 80%;
+        height: 1px;
+        top: 50%; 
+        left: 10%;
+        margin-top: 100px;
+        background-color: #0B0A08;
+        transform: translateY(-50%);
+    }
+
+    .card img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .card button {
+        width: 100%; 
+    }
+}
+
 .how-it-works {
     display: flex;
-    background-color: #f7f2de; /* Light beige background */
-    padding:0px 5%; /* Top and bottom padding, with some side padding */
-    gap: 45px; /* Space between columns */
+    background-color: #f7f2de;
+    padding:0px 5%; 
+    gap: 45px; 
     width: 90%;
     margin: 0 auto;
     border-top: 1px solid #0B0A08;
+    border-bottom: 1px solid #0B0A08;
 }
 
 /* Left Column Styling */
@@ -346,7 +379,7 @@ body {
 }
 
 .how-it-works-heading {
-    font-size: 36px; /* Adjust according to desktop size */
+    font-size: 36px; 
     font-family: 'Arimo', sans-serif;
     font-weight: 290;
     text-transform: uppercase;
@@ -359,7 +392,7 @@ body {
     flex: 2;
     display: flex;
     flex-direction: column;
-    gap: 0px; /* Space between each info box */
+    gap: 0px; 
 }
 
 /* Individual Info Box Styling */
@@ -397,24 +430,28 @@ body {
     text-decoration: underline;
 }
 
+.how-it-works-right .info-box:nth-of-type(4) {
+    border-bottom: none;
+}
+
 /* Responsive Layout for Mobile */
 @media (max-width: 768px) {
     .how-it-works {
         flex-direction: column;
-        padding: 45px 5%; /* Reduced padding for smaller screens */
+        padding: 45px 5%; 
         gap: 45px;
     }
 
     .how-it-works-heading {
-        font-size: 24px; /* Smaller font for mobile */
+        font-size: 24px; 
     }
 
     .info-title {
-        font-size: 18px; /* Adjusted size for mobile */
+        font-size: 18px; 
     }
 
     .info-description {
-        font-size: 15px; /* Adjusted size for mobile */
+        font-size: 15px; 
     }
 }
 
@@ -430,16 +467,17 @@ body {
 /* Product Cards Layout */
 .product-cards {
     display: flex;
-    gap: 29px;
-    justify-content: center;
-    padding: 0 45px;
+    flex-wrap: wrap; 
+    gap: 30px; 
+    justify-content: center; 
+    padding: 0 20px; 
 }
 
 /* Product Card Styling */
 .product-card {
+    flex: 1 1 calc(33.333% - 30px); 
     max-width: 455px;
-    text-align: center;
-    font-family: 'Arimo', sans-serif;
+    box-sizing: border-box; 
 }
 
 /* Product Image Container */
@@ -484,7 +522,7 @@ body {
 .product-details {
     display: flex;
     justify-content: space-between;
-    padding: 0 10px; /* Optional padding for consistent spacing */
+    padding: 0 10px; 
 }
 
 .product-name {
@@ -510,32 +548,30 @@ body {
 
 /* Adjust bottom spacing */
 .product-info .product-weight {
-    margin-bottom: -50px; /* Adjusts spacing between weight and price */
+    margin-bottom: -50px; 
 }
 
 /* Ensure consistent spacing with footer */
 .product-info {
-    margin-bottom: 120px; /* Adjust spacing from product card to footer */
+    margin-bottom: 120px; 
 }
 
-/* Produce Section - Responsive Grid for Stacking */
 
 /* Produce Section */
 .produce-section {
     background-color: #f7f2de;
     padding-top: 90px;
     padding-left: 45px;
-    padding-right: 45px; /* Optional: to balance on both sides */
+    padding-right: 45px; 
     margin-top: 0px;
 }
 
-/* Targeting only the section-title within the produce-section */
 .produce-section .section-title {
     font-size: 36px;
     text-align: left;
     font-family: 'Arimo', sans-serif;
     text-transform: uppercase;
-    margin: 0px 45px 30px; /* Adjust margin as needed */
+    margin: 0px 45px 30px; 
 }
 
 .produce-section .produce-text {
@@ -547,28 +583,28 @@ body {
 
 .produce-section .product-cards {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping to the next row */
+    flex-wrap: wrap; 
     gap: 30px;
-    justify-content: start; /* Align items to the start */
+    justify-content: start; 
     padding: 0px 45px;
 }
 
 .produce-section .product-card {
-    flex: 1 1 calc(33.333% - 29px); /* 3 cards per row, minus the gap */
+    flex: 1 1 calc(33.333% - 29px); 
     max-width: 455px;
 }
 
-/* For screens smaller than 768px, stack items in two columns */
+/* For medium screens: 2 cards per row */
 @media (max-width: 768px) {
-    .produce-section .product-card {
-        flex: 1 1 calc(50% - 29px); /* 2 cards per row */
+    .product-card {
+        flex: 1 1 calc(50% - 30px); 
     }
 }
 
-/* For screens smaller than 480px, stack items in a single column */
+/* For small screens: 1 card per row */
 @media (max-width: 480px) {
-    .produce-section .product-card {
-        flex: 1 1 100%; /* 1 card per row */
+    .product-card {
+        flex: 1 1 100%; 
     }
 }
 
@@ -577,20 +613,240 @@ body {
     margin: 0;
     padding: 45px 0;
     background-color: #f7f2de;
-    border-top: 1px solid #0B0A08; 
+    border-top: 1px solid #0B0A08;
     border-bottom: 1px solid #0B0A08;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-/* Styling for the border around the title */
-.partnering-farms .section-title {
-    text-align: center;
-    font-size: 24px;
-    font-weight: lighter;
-    padding: 45px 0;
+.partnering-farms-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px; 
+    max-width: 1200px; 
     margin: 0 auto;
-    max-width: 80%;
+    padding: 0 20px;
+    flex-wrap: nowrap; 
 }
+
+.text-container {
+    flex: 1; 
+    text-align: left; 
+    padding-right: 20px; 
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.divider {
+    width: 1px; 
+    background-color: #0B0A08;
+    height: 100%; 
+    margin: 0 20px; 
+}
+
+.map-container {
+    flex: 1.5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-container img {
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Responsive Layout for Mobile Screens */
+@media (max-width: 768px) {
+    .partnering-farms-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divider {
+        width: 80%; 
+        height: 1px; 
+        margin: 20px 0; 
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .map-container img {
+        max-width: 100%; 
+    }
+}
+
+
+/* Chat Section Styling */
+.chat-section {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    border-radius: 15px;
+}
+
+.chat-header {
+    background-color: #f7f2de;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    border-radius: 15px 15px 0 0;
+}
+
+.chat-window {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-bubble {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.chat-bubble.user {
+    background-color: #dfefff;
+    align-self: flex-end;
+}
+
+.chat-bubble.bot {
+    background-color: #fff6e6;
+    align-self: flex-start;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px 0 0 10px;
+}
+
+.chat-input button {
+    background-color: #DC4131; 
+    color: white;
+    border: none;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px; 
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.chat-input button img {
+    width: 20px; 
+    height: 20px;
+}
+
+.chat-input button:hover {
+    background-color: #AE2E21; 
+}
+
+
+/* Chat Icon Styling */
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #008F51;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.chat-icon:hover {
+    transform: scale(1.1);
+}
+
+.chat-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Chat Container */
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    border-radius: 15px;
+}
+
+/* Chat Container Visible State */
+.chat-container.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Chat Header Close Button */
+.close-chat {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
 
 /* Footer Styling */
 .footer {
