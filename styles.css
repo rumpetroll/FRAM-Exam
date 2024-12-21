@@ -648,7 +648,7 @@ body {
     height: 100%; 
     margin: 0 20px; 
 }
-
+/* Dont need this
 .map-container {
     flex: 1.5; 
     display: flex;
